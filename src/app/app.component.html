@@ -1,5 +1,7 @@
 <app-navbar name="{{name}}"> </app-navbar>
 <div class="timebutton">
+
+  <input type="number" min="1" value="0"  />
   <span>{{ timer.getCount() }}s</span>
   <button (click)="timer.start(1000)">Iniciar</button>
   <button (click)="timer.stop()">Parar</button>

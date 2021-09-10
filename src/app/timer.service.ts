@@ -1,5 +1,5 @@
-import { Injectable } from "@angular/core";
-import { LoggerService } from "./logger.service";
+import { Injectable } from '@angular/core';
+import { LoggerService } from './logger.service';
 
 @Injectable()
 export class TimerService {
@@ -7,7 +7,7 @@ export class TimerService {
   private counter = 0;
 
   constructor(private Logger: LoggerService) {
-    this.Logger.add("TimerService constructed");
+    this.Logger.add('TimerService constructed');
   }
 
   /*inicia a contagem em ms a cada n ms o contador é zerado */
@@ -16,7 +16,7 @@ export class TimerService {
       (this.timer = setInterval(() => {
         this.counter++;
       }, ms)),
-        this.Logger.add("TimerService started with " + ms + " ms interval");
+        this.Logger.add('TimerService started with ' + ms + ' ms interval');
     }
   }
 
@@ -24,13 +24,13 @@ export class TimerService {
     if (this.timer) {
       clearInterval(this.timer);
       this.timer = null;
-      this.Logger.add("TimerService stopped");
+      this.Logger.add('TimerService stopped');
     }
   }
 
   resetT() {
     if (this.timer != 0) this.counter = 0;
-    this.Logger.add("TimerService reseted");
+    this.Logger.add('TimerService reseted');
   }
 
   getCount() {
