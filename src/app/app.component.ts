@@ -7,7 +7,7 @@ import { TimerService } from "./timer.service";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  name = "Timer e Disciplinas";
+  name = "Projeto Timer e Disciplinas";
 
   constructor(public timer: TimerService) {
     this.timer.start(1000);
